@@ -8,13 +8,10 @@
 
 3: Clone or fork or download the python files to a directory where you usually keep your software
 
-4: Each time you start python, you need to add the TA software folder pathname to PYTHONPATH, by opening a python instance and executing the following.
+4: On Mac or Linux machines add the software folder to your PYTHONPATH via .bashrc (or similar); on windows machines use System Properties -> Advanced -> Environment Variables -> PYTHONPATH
 
-    import sys
-    import os
-    directory_to_add = 'whichever/path/you/chose'
-    directory_to_add = '/Users/damon/Desktop/BACKED_UP/Software/DamonWrittenSoftware/Transient_Absorption_Processing/python_qt_TA_data_processing_v0p5'
-    sys.path.append(directory_to_add)
+    add the following to .bashrc (or similar) on mac/linux, or add the path manually on windows machines
+    export PYTHONPATH="/path/to/your/custom/modules:$PYTHONPATH"
 
 3:  Change the working directory of your python terminal to the folder that has your TA data files.
     import os
