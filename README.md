@@ -36,7 +36,7 @@
 
 
 
-# List of main functions with modules named via:  
+# List of main functions:  
 shared_supporting_functions             usually abbreviated as TA_sh
 plot_TA_matrix                          usually abbreviated as TA_plt
 merge_TA_matrices                       usually abbreviated as TA_mrg
