@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "name": "Python Debug: TA_plot",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/TA_plot_matrix.py", // Name a specific script to debug
+            "console": "integratedTerminal",
+			"python": "/Users/damon/miniforge3/envs/basic_math_plots/bin/python", // PASTE YOUR python ENV PATH here
+            "cwd": "/Users/damon/Desktop/BACKED_UP/WorkFiles/ProjectsGrants/2024_DesignedProtein_Photosynthesis/2024_Sfeir_Optics_on_PhotoChargeSeparating_Proteins/ZnHeme_PhotoMeasurements/Astrella_UltraFast_TransientAbsorption_measurements/20251112_Transient_Absorption/raw_files_from_TAbeamline_day",
+            "args": ["HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5"]  // Add your execution arguments here
+        },
+        {
+            "name": "Python Debug: TA_t0",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/TA_t0_correction_and_background_removal.py", // Name a specific script to debug
+            "console": "integratedTerminal",
+			"python": "/Users/damon/miniforge3/envs/basic_math_plots/bin/python", // PASTE YOUR python ENV PATH here
+            "cwd": "/Users/damon/Desktop/BACKED_UP/WorkFiles/ProjectsGrants/2024_DesignedProtein_Photosynthesis/2024_Sfeir_Optics_on_PhotoChargeSeparating_Proteins/ZnHeme_PhotoMeasurements/Astrella_UltraFast_TransientAbsorption_measurements/20251112_Transient_Absorption/raw_files_from_TAbeamline_day",
+            "args": ["HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5"]  // Add your execution arguments here
+        },
+        {
+            "name": "Python Debug: TA_merge",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/TA_merge_matrices.py", // Name a specific script to debug
+            "console": "integratedTerminal",
+			"python": "/Users/damon/miniforge3/envs/basic_math_plots/bin/python", // PASTE YOUR python ENV PATH here
+            "cwd": "/Users/damon/Desktop/BACKED_UP/WorkFiles/ProjectsGrants/2024_DesignedProtein_Photosynthesis/2024_Sfeir_Optics_on_PhotoChargeSeparating_Proteins/ZnHeme_PhotoMeasurements/Astrella_UltraFast_TransientAbsorption_measurements/20251112_Transient_Absorption/raw_files_from_TAbeamline_day",
+            "args": ""  // Add your execution arguments here ['HHHF_Zn_heme_ZnCl_p425nm_blue_300uW.h5.t0_corr.csv','HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5.t0_corr.csv']
+        },
+        {
+            "name": "Python Debug: Generic File", // Debug a generic python file
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
+
