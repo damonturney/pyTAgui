@@ -50,9 +50,9 @@ class TA_merge_matrix_GUI_main_Window(QMainWindow):    #This nomenclature causes
         # pyqt5 window setup: needs the QMainWindow object to be inherited into this class. 
         self.setWindowTitle("TA matrix merger")
         self.dpi = QApplication.primaryScreen().logicalDotsPerInch() #Get screen DPI
-        window_taller_factor = 1.2
+        window_taller_factor = 1.23
         self.window_width_inches = 15
-        self.window_height_inches = 10.8 * window_taller_factor
+        self.window_height_inches = 10.6 * window_taller_factor
         self.resize(int(self.window_width_inches * self.dpi), int(self.window_height_inches * self.dpi))  # Width, Height in pixels (converted from inches)
 
         # Create the main pyqt5 object (Qwidget) and then create the geometric layout that will hold a LHS box (for the matplotlib stuff) and RHS box (for the pyqt5 Controls).
@@ -157,7 +157,7 @@ class TA_merge_matrix_GUI_main_Window(QMainWindow):    #This nomenclature causes
         
         # Initial plot of the probe counts
         self.probe_counts = self.all_probe_counts[self.presently_selected_idx, :]
-        self.ax_probe_counts = self.fig_han.add_axes([0.06, 0.01, 0.66, 0.161], sharex=self.pcolormesh_transects.TA_image_axis_han) # Create axes below the main image. [left bottom width height]
+        self.ax_probe_counts = self.fig_han.add_axes([0.06, 0.02, 0.66, 0.161], sharex=self.pcolormesh_transects.TA_image_axis_han) # Create axes below the main image. [left bottom width height]
         self.ax_probe_counts.axes.yaxis.set_label_text('probe counts', color='b')
         self.ax_probe_counts.tick_params(axis='y', colors='blue')
         self.line_probe_counts, = self.ax_probe_counts.plot(self.TA_matrix_wavelengths, self.probe_counts, color='b')
