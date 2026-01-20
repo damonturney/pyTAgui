@@ -392,13 +392,13 @@ sys.excepthook = handle_exception
 
 
 
-if __name__ == "__main__":       # This line is asking: "Is this file the one that started the process?"  We can have only one QApplication instance per process, so we need to ensure this is the main file.
-    # Check if a filename was provided in the command line arguments
-    if len(sys.argv) > 1:
-        TA_matrix_input_filenames = sys.argv[1]
-    else:
-        # Fallback default if no file is provided
-        TA_matrix_input_filenames = ['HHHF_Zn_heme_ZnCl_p425nm_blue_300uW.h5.t0_corr.csv','HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5.t0_corr.csv']  # default input for testing:
-    # Start the application
-    window = TA_merge_matrix_GUI(TA_matrix_input_filenames) #The QApplication instance must be created before this.  The init method recognizes QApplication already exists and uses it.
+# if __name__ == "__main__":       # This line is asking: "Is this file the one that started the process?"  We can have only one QApplication instance per process, so we need to ensure this is the main file.
+#     # Check if a filename was provided in the command line arguments
+#     if len(sys.argv) > 1:
+#         TA_matrix_input_filenames = sys.argv[1]
+#     else:
+#         # Fallback default if no file is provided
+#         TA_matrix_input_filenames = ['HHHF_Zn_heme_ZnCl_p425nm_blue_300uW.h5.t0_corr.csv','HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5.t0_corr.csv']  # default input for testing:
+#     # Start the application
+#     window = TA_merge_matrix_GUI(TA_matrix_input_filenames) #The QApplication instance must be created before this.  The init method recognizes QApplication already exists and uses it.
     

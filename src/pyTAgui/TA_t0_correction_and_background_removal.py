@@ -31,7 +31,7 @@ import src.pyTAgui.shared_functions_classes as TA_sh
 # TA_data are assumed to be 2D matrices with wavelengths along the 1st row, and with probe delay times along the 1st column
 
 
-class TA_t0_correction_and_background_removal():   
+class TA_t0_correction_and_background_removal_GUI():   
     def __init__(self, TA_matrix_input):
         self.app = QApplication(sys.argv)                                           # Create the QApplication instance           
         self.TA_matrix_input = TA_matrix_input
@@ -375,13 +375,13 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 sys.excepthook = handle_exception
 
 
-if __name__ == "__main__":       # This line is asking: "Is this file the one that started the process?"  We can have only one QApplication instance per process, so we need to ensure this is the main file.
-    # Check if a filename was provided in the command line arguments
-    if len(sys.argv) > 1:
-        TA_matrix_input = sys.argv[1]
-    else:
-        # Fallback default if no file is provided
-        TA_matrix_input = "HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5"  # default input for testing:
-    # Start the application
-    window = TA_t0_correction_and_background_removal(TA_matrix_input) #The QApplication instance must be created before this.  The init method recognizes QApplication already exists and uses it.
+# if __name__ == "__main__":       # This line is asking: "Is this file the one that started the process?"  We can have only one QApplication instance per process, so we need to ensure this is the main file.
+#     # Check if a filename was provided in the command line arguments
+#     if len(sys.argv) > 1:
+#         TA_matrix_input = sys.argv[1]
+#     else:
+#         # Fallback default if no file is provided
+#         TA_matrix_input = "HHHF_Zn_heme_ZnCl_p425nm_red_300uW.h5"  # default input for testing:
+#     # Start the application
+#     window = TA_t0_correction_and_background_removal_GUI(TA_matrix_input) #The QApplication instance must be created before this.  The init method recognizes QApplication already exists and uses it.
     
