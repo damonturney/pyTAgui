@@ -7,7 +7,7 @@ conda install -c conda-forge pytas
 
 # List of main utilities
 
-TA_plot_matrix_GUI                           usually abbreviated as TA_plt
+TA_plot_matrix_GUI                           usually abbreviated as TA_plt 
 
 TA_merge_matrices_GUI                        usually abbreviated as TA_mrg
 
