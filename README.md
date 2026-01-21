@@ -2,7 +2,7 @@
 Python for transient absorption spectroscopy: a suite of GUI tools based on matplotlib and QT.
 
 # Installation
-conda install -c conda-forge pytagui
+conda install -c conda-forge pytas
 
 
 # List of main utilities
