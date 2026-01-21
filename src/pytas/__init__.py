@@ -15,11 +15,9 @@ except ImportError:
 # directly at the package level.
 # Replace 'MyMainClass' and 'my_utility_function' with the ACTUAL names
 # inside your source_scripts.py file.
-from .source_scripts import (
-    TA_merge_matrix_GUI,
-    TA_plot_matrix_GUI,
-    TA_t0_correction_and_background_removal_GUI
-)
+from .TA_merge_matrices import (TA_merge_matrix_GUI)
+from .TA_plot_matrix import (TA_plot_matrix_GUI)
+from .TA_t0_correction_and_background_removal import (TA_t0_correction_and_background_removal_GUI)
 
 # 3. Define the public API
 # This controls what happens if someone does 'from github_repo_name import *'
